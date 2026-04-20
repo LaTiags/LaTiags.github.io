@@ -72,6 +72,9 @@ function setTheme() {
 function handleClickCount() {
   clickCount++;
 
+  const display = document.getElementById("countDisplay");
+  if (display) display.textContent = clickCount;
+
   console.log("🖱️ Button clicked:", clickCount, "times");
 
   if (clickCount === 5) {
