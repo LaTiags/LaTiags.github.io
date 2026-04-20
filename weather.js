@@ -66,7 +66,7 @@ document.getElementById("btnGaillac").onclick = function () {
     loadWeatherByCity("Gaillac", 43.9014, 1.8989);
 };
 
-document.getElementById("btnLjubljanabtn").onclick = function () {
+document.getElementById("btnLjubljana").onclick = function () {
     console.log("Ljubljana button clicked");
     loadWeatherByCity("Ljubljana", 46.0569, 14.5058);
 };
