@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Tiago ALVES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Weather App</h1>
+        <p>Real-time weather data from Open-Meteo API</p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html">Back to Portfolio</a>
+        <a href="weather.html" class="active">Weather App</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Select a City</h2>
+            <p>Click a button below to get current weather information.</p>
+            
+            <div class="weather-buttons">
+                <button id="btnKuopio" class="btn btn-weather">Kuopio</button>
+                <button id="btnHelsinki" class="btn btn-weather">Helsinki</button>
+                <button id="btnTampere" class="btn btn-weather">Tampere</button>
+                <button id="btnParis" class="btn btn-weather">Paris</button>
+                <button id="btnBayonne" class="btn btn-weather">Bayonne</button>
+                <button id="btnGaillac" class="btn btn-weather">Gaillac</button>
+                <button id="btnLjubljana" class="btn btn-weather">Ljubljana</button>
+                <button id="btnYakutsk" class="btn btn-weather">Yakutsk</button>
+                <button id="btnLisbon" class="btn btn-weather">Lisbon</button>
+                <button id="btnPorto" class="btn btn-weather">Porto</button>
+                <button id="btnArcos" class="btn btn-weather">Arcos de Valdevez</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Weather Information</h2>
+            
+            <div id="weatherBox" class="weather-box">
+                <div class="weather-item">
+                    <strong>City:</strong> 
+                    <span id="city">-</span>
+                </div>
+                <div class="weather-item">
+                    <strong>Temperature:</strong> 
+                    <span id="temperature">-</span>
+                </div>
+                <div class="weather-item">
+                    <strong>Wind Speed:</strong> 
+                    <span id="wind">-</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Debug Output</h2>
+            <pre id="output"></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://www.linkedin.com/">LinkedIn</a> |
+            <a href="https://github.com/">GitHub</a>
+        </p>
+        <p class="last-updated">Weather data provided by Open-Meteo API</p>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,656 @@
+/* =========================
+   Base typography & reset
+========================= */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f7f5fb;
+  color: #2d2a32;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   Headings
+========================= */
+
+h1 {
+  font-size: 2.2rem;
+  color: #4b2e83;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #5e3ea1;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #6a3dc7;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Layout
+========================= */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+.main-nav {
+  background-color: #4b2e83;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.main-nav a:hover {
+  background-color: #5e3ea1;
+  text-decoration: none;
+}
+
+.main-nav a.active {
+  background-color: #7b4dff;
+}
+
+/* =========================
+   Header & Footer
+========================= */
+
+header,
+footer {
+  background-color: #e6ddf5;
+  padding: 1.5rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+header p {
+  margin: 0;
+  color: #3e355a;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Sections
+========================= */
+
+section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(75, 46, 131, 0.08);
+  transition: background-color 0.3s ease;
+}
+
+/* =========================
+   Weather App Specific Styles
+========================= */
+
+.weather-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn-weather {
+  background: linear-gradient(135deg, #00b4d8, #0096c7);
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 180, 216, 0.35);
+}
+
+.btn-weather:hover {
+  background: linear-gradient(135deg, #0096c7, #0077b6);
+}
+
+.weather-box {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 3px solid #00acc1;
+  box-shadow: 0 6px 20px rgba(0, 172, 193, 0.2);
+  margin: 1.5rem 0;
+}
+
+.weather-item {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  border-left: 4px solid #00838f;
+}
+
+.weather-item strong {
+  color: #00838f;
+  display: inline-block;
+  min-width: 150px;
+}
+
+.weather-item span {
+  color: #004d5a;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+#output {
+  background-color: #1e1e1e;
+  color: #0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  min-height: 150px;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 2px solid #333;
+}
+
+/* =========================
+   External Data Demo
+========================= */
+
+.btn-primary {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  box-shadow: 0 6px 18px rgba(40, 167, 69, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #218838, #1aa179);
+}
+
+.data-status {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.data-status.loading {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.data-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.data-output {
+  margin-top: 1rem;
+}
+
+.user-card {
+  background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #b3d9ff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+.user-card h3 {
+  margin-top: 0;
+  color: #0066cc;
+  border-bottom: 2px solid #b3d9ff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.user-card p {
+  margin: 0.8rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.user-card strong {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+/* =========================
+   Skills Grid
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #f8f5ff, #ede7ff);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #d1c4ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(123, 77, 255, 0.2);
+}
+
+.skill-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #4b2e83;
+  font-size: 1.3rem;
+}
+
+.skill-card p {
+  margin: 0;
+  color: #6a5b8c;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   Projects
+========================= */
+
+.project {
+  background-color: #fafafa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #7b4dff;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(123, 77, 255, 0.15);
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #4b2e83;
+}
+
+.project p {
+  margin: 0.5rem 0 1rem 0;
+  color: #3e355a;
+  line-height: 1.6;
+}
+
+.project-link {
+  display: inline-block;
+  color: #7b4dff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #5e3ea1;
+  text-decoration: underline;
+}
+
+/* =========================
+   Portfolio media
+========================= */
+
+figure {
+  margin: 0 0 1.5rem 0;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6a5b8c;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+iframe {
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+/* =========================
+   Links
+========================= */
+
+a {
+  color: #6a3dc7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Lists
+========================= */
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Last Updated
+========================= */
+
+.last-updated {
+  font-size: 0.85rem;
+  color: #6a5b8c;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* =========================
+   Skip link (accessibility)
+========================= */
+
+a[href="#main"] {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background-color: #4b2e83;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+a[href="#main"]:focus {
+  left: 10px;
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark {
+  background-color: #1e1b26;
+  color: #f1ecff;
+}
+
+body.dark section {
+  background-color: #2a2438;
+}
+
+body.dark header,
+body.dark footer {
+  background-color: #2f2750;
+}
+
+body.dark .main-nav {
+  background-color: #2f2750;
+}
+
+body.dark .main-nav a.active {
+  background-color: #5e3ea1;
+}
+
+body.dark a {
+  color: #c9a6ff;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #d4b8ff;
+}
+
+body.dark .skill-card {
+  background: linear-gradient(135deg, #3a2f5e, #4a3870);
+  border-color: #5e3ea1;
+}
+
+body.dark .skill-card h3 {
+  color: #d4b8ff;
+}
+
+body.dark .skill-card p {
+  color: #b8a5d6;
+}
+
+body.dark .project {
+  background-color: #332d44;
+  border-left-color: #9b7dff;
+}
+
+body.dark .project h3 {
+  color: #d4b8ff;
+}
+
+body.dark .project p {
+  color: #c5b8d9;
+}
+
+body.dark .project-link {
+  color: #b388ff;
+}
+
+body.dark .project-link:hover {
+  color: #d4b8ff;
+}
+
+body.dark .last-updated {
+  color: #9b8bb3;
+}
+
+body.dark figcaption {
+  color: #b8a5d6;
+}
+
+body.dark .user-card {
+  background: linear-gradient(135deg, #2a3f5f, #344a6a);
+  border-color: #5a7fa8;
+}
+
+body.dark .user-card h3 {
+  color: #8db3ff;
+  border-bottom-color: #5a7fa8;
+}
+
+body.dark .user-card p {
+  color: #d4e1f5;
+}
+
+body.dark .user-card strong {
+  color: #8db3ff;
+}
+
+body.dark .data-status.loading {
+  background-color: #5a4f2e;
+  color: #ffd966;
+  border-left-color: #ffb700;
+}
+
+body.dark .data-status.error {
+  background-color: #5a2e2e;
+  color: #ff9999;
+  border-left-color: #ff5555;
+}
+
+body.dark .weather-box {
+  background: linear-gradient(135deg, #1a3d4d, #225566);
+  border-color: #3a7a8f;
+}
+
+body.dark .weather-item {
+  background-color: rgba(42, 85, 100, 0.5);
+  border-left-color: #4da6bf;
+}
+
+body.dark .weather-item strong {
+  color: #6ec9e0;
+}
+
+body.dark .weather-item span {
+  color: #a8e6f5;
+}
+
+/* =========================
+   Animated Buttons
+========================= */
+
+.btn {
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Violet gradient theme button */
+
+.btn-theme {
+  background: linear-gradient(135deg, #7b4dff, #b388ff);
+  color: white;
+  box-shadow: 0 6px 18px rgba(123, 77, 255, 0.35);
+}
+
+/* Counter button — softer violet */
+
+.btn-counter {
+  background: linear-gradient(135deg, #ede7ff, #d1c4ff);
+  color: #4b2e83;
+  box-shadow: 0 4px 12px rgba(75, 46, 131, 0.15);
+}
+
+/* Hover animation */
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* Click press animation */
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Glow pulse effect */
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.35), transparent 60%);
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+/* Dark mode adaptation */
+
+body.dark .btn-counter {
+  background: linear-gradient(135deg, #3a2f5e, #5e3ea1);
+  color: #f1ecff;
+}
+
+/* Button pop animation on load */
+
+.btn {
+  animation: btnPop 0.5s ease both;
+}
+
+@keyframes btnPop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+  
+  .main-nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .weather-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+}

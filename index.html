@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tiago ALVES</h1>
+    <p>Student in an engineering degree, based in the south west of france.</p>
+    <br>
+    <button id="themeBtn" class="btn btn-theme">Toggle Theme</button>
+    <button id="countBtn" class="btn btn-counter">Click Counter</button>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="weather.html">Weather App</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- External Data Demo Section -->
+    <section>
+      <h2>External Data Demo</h2>
+      <p>Click the button below to load user data from an external API.</p>
+      
+      <button id="loadDataBtn" class="btn btn-primary">Load Data</button>
+      
+      <div id="dataStatus" class="data-status"></div>
+      <div id="dataOutput" class="data-output"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>HTML5</h3>
+          <p>Semantic markup & accessibility</p>
+        </div>
+        <div class="skill-card">
+          <h3>CSS3</h3>
+          <p>Responsive design & animations</p>
+        </div>
+        <div class="skill-card">
+          <h3>JavaScript</h3>
+          <p>DOM manipulation & ES6+</p>
+        </div>
+        <div class="skill-card">
+          <h3>Python</h3>
+          <p>Scripting & automation</p>
+        </div>
+        <div class="skill-card">
+          <h3>IoT</h3>
+          <p>Embedded systems & sensors</p>
+        </div>
+        <div class="skill-card">
+          <h3>LTspice</h3>
+          <p>Circuit simulation & analysis</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+      
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>A real-time weather application that fetches data from Open-Meteo API. Features include multiple city options and live weather updates with temperature and wind speed information.</p>
+        <a href="weather.html" class="project-link">View Weather App →</a>
+      </div>
+
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio showcasing my work with HTML, CSS, and JavaScript. Features include theme toggle and local storage persistence.</p>
+        <a href="https://github.com/LaTiags" class="project-link">View on GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>IoT Weather Station</h3>
+        <p>An Arduino-based weather monitoring system that collects temperature, humidity, and pressure data, displaying it on a web dashboard.</p>
+        <a href="https://github.com/LaTiags" class="project-link">View on GitHub →</a>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section>
+      <h2>Portfolio</h2>
+
+      <figure>
+        <img src="porschegt2rs.jpg" alt="Screenshot of my first project">
+        <figcaption>PORSCHE GT2RS</figcaption>
+      </figure>
+
+      <p>
+        <a href="https://github.com/LaTiags">My GitHub</a>
+      </p>
+
+      <figure>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/3s_ali_rZGY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <figcaption>AUDI RS6 GT EDIT</figcaption>
+      </figure>
+    </section>
+
+    <!-- Areas of Interest Section -->
+    <section>
+      <h2>Areas of Interest</h2>
+      <ul>
+        <li>Web development</li>
+        <li>Design</li>
+        <li>Technology</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="https://www.linkedin.com/">LinkedIn</a> |
+      <a href="https://github.com/">GitHub</a>
+    </p>
+    <p id="lastUpdated" class="last-updated"></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
