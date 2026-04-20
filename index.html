@@ -3,140 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Tiago Alves — Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <a href="#main">Skip to content</a>
+  <div class="page-wrapper">
 
-  <header>
-    <h1>Tiago ALVES</h1>
-    <p>Student in an engineering degree, based in the south west of france.</p>
-    <br>
-    <button id="themeBtn" class="btn btn-theme">Toggle Theme</button>
-    <button id="countBtn" class="btn btn-counter">Click Counter</button>
-  </header>
+    <!-- Sidebar / Header -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="profile-block">
+          <div class="profile-monogram">TA</div>
+          <div>
+            <h1 class="profile-name">Tiago Alves</h1>
+            <p class="profile-title">Engineering Student</p>
+            <p class="profile-location">
+              <span class="dot"></span> South-west France
+            </p>
+          </div>
+        </div>
 
-  <nav class="main-nav">
-    <a href="index.html" class="active">Home</a>
-    <a href="weather.html">Weather App</a>
-  </nav>
+        <nav class="side-nav">
+          <a href="index.html" class="active">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M2 6l6-4 6 4v8H2V6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            Overview
+          </a>
+          <a href="weather.html">
+            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            Weather App
+          </a>
+        </nav>
 
-  <main id="main">
+        <div class="sidebar-actions">
+          <button id="themeBtn" class="icon-btn" title="Toggle theme">
+            <svg id="themeIcon" viewBox="0 0 16 16" fill="none"><path d="M13.5 10A6 6 0 015.5 2a6 6 0 108 8z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </button>
+          <a href="https://github.com/LaTiags" class="icon-btn" title="GitHub" target="_blank">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1C4.13 1 1 4.13 1 8c0 3.09 2.01 5.71 4.79 6.64.35.06.48-.15.48-.34v-1.2C4.26 13.53 3.85 12.16 3.85 12.16c-.32-.81-.78-1.03-.78-1.03-.64-.43.05-.42.05-.42.7.05 1.07.72 1.07.72.63 1.07 1.64.76 2.04.58.06-.45.24-.76.44-.94-1.56-.18-3.2-.78-3.2-3.47 0-.77.27-1.39.72-1.88-.07-.18-.31-.89.07-1.86 0 0 .59-.19 1.92.72A6.7 6.7 0 018 5.84c.59 0 1.19.08 1.75.23 1.33-.9 1.92-.72 1.92-.72.38.97.14 1.68.07 1.86.45.49.72 1.11.72 1.88 0 2.7-1.64 3.29-3.21 3.46.25.22.48.65.48 1.31v1.94c0 .19.13.41.48.34A6.997 6.997 0 0015 8c0-3.87-3.13-7-7-7z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" class="icon-btn" title="LinkedIn" target="_blank">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13 1H3C1.9 1 1 1.9 1 3v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM5.5 12H3.8V6.5H5.5V12zm-.85-6.36a1 1 0 110-2 1 1 0 010 2zM12.2 12h-1.7v-2.7c0-.65-.01-1.48-.9-1.48-.9 0-1.04.7-1.04 1.43V12H6.85V6.5h1.64v.75h.02c.23-.43.78-.88 1.6-.88 1.71 0 2.03 1.13 2.03 2.59V12z"/></svg>
+          </a>
+        </div>
 
-    <!-- External Data Demo Section -->
-    <section>
-      <h2>External Data Demo</h2>
-      <p>Click the button below to load user data from an external API.</p>
-      
-      <button id="loadDataBtn" class="btn btn-primary">Load Data</button>
-      
-      <div id="dataStatus" class="data-status"></div>
-      <div id="dataOutput" class="data-output"></div>
-    </section>
-
-    <!-- Skills Section -->
-    <section>
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>HTML5</h3>
-          <p>Semantic markup & accessibility</p>
-        </div>
-        <div class="skill-card">
-          <h3>CSS3</h3>
-          <p>Responsive design & animations</p>
-        </div>
-        <div class="skill-card">
-          <h3>JavaScript</h3>
-          <p>DOM manipulation & ES6+</p>
-        </div>
-        <div class="skill-card">
-          <h3>Python</h3>
-          <p>Scripting & automation</p>
-        </div>
-        <div class="skill-card">
-          <h3>IoT</h3>
-          <p>Embedded systems & sensors</p>
-        </div>
-        <div class="skill-card">
-          <h3>LTspice</h3>
-          <p>Circuit simulation & analysis</p>
-        </div>
+        <button id="countBtn" class="counter-btn">
+          <span id="countLabel">0</span> clicks
+        </button>
       </div>
-    </section>
+    </aside>
 
-    <!-- Projects Section -->
-    <section>
-      <h2>Projects</h2>
-      
-      <div class="project">
-        <h3>Weather App</h3>
-        <p>A real-time weather application that fetches data from Open-Meteo API. Features include multiple city options and live weather updates with temperature and wind speed information.</p>
-        <a href="weather.html" class="project-link">View Weather App →</a>
-      </div>
+    <!-- Main Content -->
+    <main id="main" class="main-content">
 
-      <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>A responsive personal portfolio showcasing my work with HTML, CSS, and JavaScript. Features include theme toggle and local storage persistence.</p>
-        <a href="https://github.com/LaTiags" class="project-link">View on GitHub →</a>
-      </div>
+      <!-- Hero -->
+      <section class="hero-section">
+        <div class="hero-tag">Engineering Portfolio</div>
+        <h2 class="hero-heading">Building at the intersection of<br><em>hardware & software</em></h2>
+        <p class="hero-sub">Engineering student passionate about embedded systems, web development, and technical problem-solving. Currently studying in the south-west of France.</p>
 
-      <div class="project">
-        <h3>IoT Weather Station</h3>
-        <p>An Arduino-based weather monitoring system that collects temperature, humidity, and pressure data, displaying it on a web dashboard.</p>
-        <a href="https://github.com/LaTiags" class="project-link">View on GitHub →</a>
-      </div>
-    </section>
+        <div class="hero-cta">
+          <button id="loadDataBtn" class="btn-primary">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1v9M4 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12v1a1 1 0 001 1h10a1 1 0 001-1v-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Load API Demo
+          </button>
+          <a href="weather.html" class="btn-secondary">View Weather App →</a>
+        </div>
 
-    <!-- Portfolio Section -->
-    <section>
-      <h2>Portfolio</h2>
+        <div id="dataStatus" class="data-status"></div>
+        <div id="dataOutput"></div>
+      </section>
 
-      <figure>
-        <img src="porschegt2rs.jpg" alt="Screenshot of my first project">
-        <figcaption>PORSCHE GT2RS</figcaption>
-      </figure>
+      <!-- Skills -->
+      <section class="content-section">
+        <div class="section-label">Skills</div>
+        <h2 class="section-title">Technical expertise</h2>
 
-      <p>
-        <a href="https://github.com/LaTiags">My GitHub</a>
-      </p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon skill-icon--web">
+              <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M6 7l3 3-3 3M10 13h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>HTML5 & CSS3</h3>
+            <p>Semantic markup, accessibility, responsive design & animations</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon skill-icon--js">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M3 3h14v14H3z" stroke="currentColor" stroke-width="1.4"/><path d="M13 8v5.5a1.5 1.5 0 01-3 0M7 8v3c0 1.1.9 2 2 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <h3>JavaScript</h3>
+            <p>DOM manipulation, async/await, REST API integration & ES6+</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon skill-icon--py">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M7 3h3a2 2 0 012 2v2H7a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.4"/><path d="M13 17h-3a2 2 0 01-2-2v-2h6a2 2 0 012 2v0a2 2 0 01-2 2z" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="6" r=".5" fill="currentColor"/><circle cx="11" cy="14" r=".5" fill="currentColor"/></svg>
+            </div>
+            <h3>Python</h3>
+            <p>Scripting, automation & data processing</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon skill-icon--iot">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 5.5A6.4 6.4 0 0014.5 14.5M14.5 5.5A6.4 6.4 0 005.5 14.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="4" cy="10" r="1" fill="currentColor"/><circle cx="16" cy="10" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3>IoT</h3>
+            <p>Embedded systems, sensors & microcontroller programming</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon skill-icon--mech">
+              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.4"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Mechanical Engineering</h3>
+            <p>CAD design, structural analysis & mechatronic systems</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon skill-icon--circuits">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h3M14 10h3M6 10V7h3v6H6v-3zM11 10V7h3v6h-3v-3z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Electronics</h3>
+            <p>Circuit design, PCB layout & signal analysis</p>
+          </div>
+        </div>
+      </section>
 
-      <figure>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/3s_ali_rZGY"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-        <figcaption>AUDI RS6 GT EDIT</figcaption>
-      </figure>
-    </section>
+      <!-- Projects -->
+      <section class="content-section">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title">Featured work</h2>
 
-    <!-- Areas of Interest Section -->
-    <section>
-      <h2>Areas of Interest</h2>
-      <ul>
-        <li>Web development</li>
-        <li>Design</li>
-        <li>Technology</li>
-      </ul>
-    </section>
+        <div class="projects-list">
+          <div class="project-card">
+            <div class="project-meta">
+              <span class="project-tag">Web</span>
+              <span class="project-tag">API</span>
+            </div>
+            <h3>Weather App</h3>
+            <p>Real-time weather application fetching data from the Open-Meteo API. Supports 11 cities across Europe and Asia with live temperature and wind speed data.</p>
+            <a href="weather.html" class="project-link">
+              View project
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
 
-  </main>
+          <div class="project-card">
+            <div class="project-meta">
+              <span class="project-tag">HTML/CSS/JS</span>
+              <span class="project-tag">UX</span>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio showcasing engineering and development work. Features dark mode, localStorage persistence and clean component architecture.</p>
+            <a href="https://github.com/LaTiags" class="project-link" target="_blank">
+              View on GitHub
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
 
-  <footer>
-    <p>
-      <a href="https://www.linkedin.com/">LinkedIn</a> |
-      <a href="https://github.com/">GitHub</a>
-    </p>
-    <p id="lastUpdated" class="last-updated"></p>
-  </footer>
+          <div class="project-card">
+            <div class="project-meta">
+              <span class="project-tag">IoT</span>
+              <span class="project-tag">Arduino</span>
+            </div>
+            <h3>IoT Weather Station</h3>
+            <p>Arduino-based environmental monitoring system collecting temperature, humidity and pressure data, displayed on a live web dashboard.</p>
+            <a href="https://github.com/LaTiags" class="project-link" target="_blank">
+              View on GitHub
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio / Gallery -->
+      <section class="content-section">
+        <div class="section-label">Gallery</div>
+        <h2 class="section-title">Portfolio</h2>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item--wide">
+            <img src="porschegt2rs.jpg" alt="Porsche 911 GT2 RS">
+            <figcaption>Porsche 911 GT2 RS</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/3s_ali_rZGY"
+                title="Audi RS6 GT Edit"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <figcaption>Audi RS6 GT — edit</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Interests -->
+      <section class="content-section">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Areas of interest</h2>
+        <div class="interests-grid">
+          <div class="interest-item">
+            <span>Web development</span>
+          </div>
+          <div class="interest-item">
+            <span>Embedded systems</span>
+          </div>
+          <div class="interest-item">
+            <span>Mechanical design</span>
+          </div>
+          <div class="interest-item">
+            <span>Automotive engineering</span>
+          </div>
+          <div class="interest-item">
+            <span>Electronics</span>
+          </div>
+          <div class="interest-item">
+            <span>UI/UX design</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p id="lastUpdated" class="last-updated"></p>
+      </footer>
+
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
